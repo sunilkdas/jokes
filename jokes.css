@@ -29,6 +29,7 @@
     --front-text-color: hsl(34, 78%, 91%);
     --info-box-bg: hsl(222, 16%, 12%);
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -41,28 +42,25 @@ body {
     font-weight: 300;
     transition: background-color .25s ease-out;
 }
-    
-
-
 
 section.grid {
-    min-height: 100vh; 
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-div.card {
-    box-shadow: 3px 10px 5px 0px rgba(0,0,0,0.75);
-    height: 300px;
-  width: 200px;
-  background: #fff;
-  padding: 50px;
-  border-radius: 10px;
-  position: relative;
-  text-align: center;
-  color: crimson;
-  font-weight: 400;
+}
 
+div.card {
+    box-shadow: 3px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    height: 300px;
+    width: 200px;
+    background: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    color: crimson;
+    font-weight: 400;
 }
 
 div.card-header {
@@ -76,6 +74,13 @@ div.card-body {
     margin: 10px;
     font-style: italic;
 }
+
 div.card-body #punchline {
     padding-top: 100px;
+}
+
+#hint{
+    color:  black;
+    font-weight: 400;
+    display:none;
 }
