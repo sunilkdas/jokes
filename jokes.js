@@ -1,52 +1,10 @@
 try {
-  var touchstartX = 0;
-  var touchstartY = 0;
-  var touchendX = 0;
-  var touchendY = 0;
-
-  var gesuredZone = document.querySelector("body");
-
-  gesuredZone.addEventListener(
-    "touchstart",
-    function (event) {
-      touchstartX = event.screenX;
-      touchstartY = event.screenY;
-    },
-    false
-  );
-
-  gesuredZone.addEventListener(
-    "touchend",
-    function (event) {
-      touchendX = event.screenX;
-      touchendY = event.screenY;
-      handleGesure();
-    },
-    false
-  );
-
-  function handleGesure() {
-    var swiped = "swiped: ";
-    if (touchendX < touchstartX) {
-        jokesObj.getJokes()    
+    $( "document" ).on( "swiperight", swipeRightHandler );
+ 
+    // Callback function references the event target and adds the 'swipeleft' class to it
+    function swipeRightHandler( event ){
+        jokesObj.getJokes();
     }
-    if (touchendX > touchstartX) {
-        jokesObj.getJokes()    
-        
-    }
-    if (touchendY < touchstartY) {
-        jokesObj.getJokes()    
-      
-    }
-    if (touchendY > touchstartY) {
-        jokesObj.getJokes()    
-      
-    }
-    if (touchendY == touchstartY) {
-      //  jokesObj.getJokes()    
-        
-    }
-  }
   const jokesURL = `https://official-joke-api.appspot.com/random_joke`;
 
   let jokesObj = {};
